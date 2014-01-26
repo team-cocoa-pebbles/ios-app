@@ -19,6 +19,8 @@
 		1D1AFD921893F6780022C53E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFD741893F6780022C53E /* UIKit.framework */; };
 		1D1AFD9A1893F6780022C53E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D1AFD981893F6780022C53E /* InfoPlist.strings */; };
 		1D1AFD9C1893F6780022C53E /* KiwiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFD9B1893F6780022C53E /* KiwiTests.m */; };
+		1D1AFDA61893F8090022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDA51893F8090022C53E /* PebbleKit.framework */; };
+		1D1AFDA71893F8090022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDA51893F8090022C53E /* PebbleKit.framework */; };
 		1D1AFDA91893F80F0022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDA81893F80F0022C53E /* PebbleVendor.framework */; };
 		1D1AFDAA1893F80F0022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDA81893F80F0022C53E /* PebbleVendor.framework */; };
 		1D1AFDAC1893F83A0022C53E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDAB1893F83A0022C53E /* CoreMotion.framework */; };
@@ -34,8 +36,8 @@
 		1D1AFDC7189460E30022C53E /* PredictionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFDC5189460E30022C53E /* PredictionController.m */; };
 		1D1AFDCA1894613A0022C53E /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFDC91894613A0022C53E /* DataController.m */; };
 		1D1AFDCB1894613A0022C53E /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFDC91894613A0022C53E /* DataController.m */; };
-		1D1AFDCD18948BAB0022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDCC18948BAB0022C53E /* PebbleKit.framework */; };
-		1D1AFDCE18948BAB0022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDCC18948BAB0022C53E /* PebbleKit.framework */; };
+		C9B436B018948B8C00FA2AA2 /* TrafficDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */; };
+		C9B436B218948BD500FA2AA2 /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B436B118948BD500FA2AA2 /* PebbleKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +81,9 @@
 		1D1AFDC5189460E30022C53E /* PredictionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PredictionController.m; sourceTree = "<group>"; };
 		1D1AFDC81894613A0022C53E /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		1D1AFDC91894613A0022C53E /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
-		1D1AFDCC18948BAB0022C53E /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
+		C9B436AE18948B8C00FA2AA2 /* TrafficDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficDataController.h; sourceTree = "<group>"; };
+		C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficDataController.m; sourceTree = "<group>"; };
+		C9B436B118948BD500FA2AA2 /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				1D1AFDB61893F8A20022C53E /* ExternalAccessory.framework in Frameworks */,
 				1D1AFDB41893F8960022C53E /* CoreBluetooth.framework in Frameworks */,
 				1D1AFDB21893F88B0022C53E /* MessageUI.framework in Frameworks */,
+				C9B436B218948BD500FA2AA2 /* PebbleKit.framework in Frameworks */,
 				1D1AFDB01893F8760022C53E /* CoreLocation.framework in Frameworks */,
 				1D1AFDAE1893F86B0022C53E /* CFNetwork.framework in Frameworks */,
 				1D1AFDAC1893F83A0022C53E /* CoreMotion.framework in Frameworks */,
@@ -120,6 +125,7 @@
 		1D1AFD641893F6770022C53E = {
 			isa = PBXGroup;
 			children = (
+				C9B436B118948BD500FA2AA2 /* PebbleKit.framework */,
 				1D1AFD761893F6780022C53E /* Kiwi */,
 				1D1AFD951893F6780022C53E /* KiwiTests */,
 				1D1AFD6F1893F6780022C53E /* Frameworks */,
@@ -159,6 +165,8 @@
 		1D1AFD761893F6780022C53E /* Kiwi */ = {
 			isa = PBXGroup;
 			children = (
+				C9B436AE18948B8C00FA2AA2 /* TrafficDataController.h */,
+				C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */,
 				1D1AFD7F1893F6780022C53E /* AppDelegate.h */,
 				1D1AFD801893F6780022C53E /* AppDelegate.m */,
 				1D1AFDC81894613A0022C53E /* DataController.h */,
@@ -301,6 +309,7 @@
 				1D1AFD811893F6780022C53E /* AppDelegate.m in Sources */,
 				1D1AFDC218945F430022C53E /* WeatherDataController.m in Sources */,
 				1D1AFDC6189460E30022C53E /* PredictionController.m in Sources */,
+				C9B436B018948B8C00FA2AA2 /* TrafficDataController.m in Sources */,
 				1D1AFDCA1894613A0022C53E /* DataController.m in Sources */,
 				1D1AFD7D1893F6780022C53E /* main.m in Sources */,
 			);
@@ -426,7 +435,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Francesca/Documents/ios-app/Kiwi",
+					/Users/Francesca/Documents/Kiwi,
+					"/Users/laurencewong/Documents/School/hackTECH\\ 2014/ios-app/Kiwi",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kiwi/Kiwi-Prefix.pch";
@@ -444,7 +454,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Francesca/Documents/ios-app/Kiwi",
+					/Users/Francesca/Documents/Kiwi,
+					"/Users/laurencewong/Documents/School/hackTECH\\ 2014/ios-app/Kiwi",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kiwi/Kiwi-Prefix.pch";

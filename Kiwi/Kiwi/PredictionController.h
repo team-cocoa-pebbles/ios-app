@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "WeatherDataController.h"
+#import "TrafficDataController.h"
 
 @interface PredictionController : NSObject
 
 @property (strong, nonatomic) WeatherDataController *weatherDataController;
+@property (strong, nonatomic) TrafficDataController *trafficDataController;
 
 -(void)initiatePredictions;
 

@@ -11,7 +11,11 @@
 @interface WeatherDataController () <NSURLConnectionDelegate>
 @end
 
-@implementation WeatherDataController
+@implementation WeatherDataController {
+    NSString *temperature;
+    NSArray *weather;
+    NSString *description;
+}
 
 - (id)init
 {
@@ -79,9 +83,9 @@
         }
                          
         NSLog(@"JSON weather data loaded.");
-        NSString *temperature = [[root objectForKey:@"main"] objectForKey:@"temp"];
-        NSArray *weather = [root objectForKey:@"weather"];
-        NSString *description = [[weather objectAtIndex:0] objectForKey:@"description"];
+        temperature = [[root objectForKey:@"main"] objectForKey:@"temp"];
+        weather = [root objectForKey:@"weather"];
+        description = [[weather objectAtIndex:0] objectForKey:@"description"];
 
         NSLog(@"description: %@ temperature: %@", description, temperature);
                          
@@ -90,10 +94,11 @@
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     
-    NSNumber *iconKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
+    NSNumber *weatherKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
     NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
-    NSDictionary *update = @{ iconKey:[NSNumber numberWithUint8:3],
-                              temperatureKey:[NSString stringWithFormat:@"%d\u00B0C", 30] };
+    NSDictionary *update = @{ weatherKey:description,
+                              temperatureKey:[NSString stringWithFormat:@"%@\u00B0C", temperature]
+                            };
     return update;
 }
 

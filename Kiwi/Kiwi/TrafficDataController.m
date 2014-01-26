@@ -8,7 +8,9 @@
 
 #import "TrafficDataController.h"
 
-@implementation TrafficDataController
+@implementation TrafficDataController{
+    NSString* relevantTrafficStr;
+}
 
 - (id)init
 {
@@ -81,16 +83,14 @@
             NSDictionary *resourcesDictionary = [resourcesArray objectAtIndex:i];
             [self.resourcesProperty addObject:resourcesDictionary];
         }
-        [self getMostRelevantTraffic];
+        relevantTrafficStr = [self getMostRelevantTraffic];
         dispatch_semaphore_signal(semaphore);
     }];
     
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     
-    NSNumber *iconKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
-    NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
-    NSDictionary *update = @{ iconKey:[NSNumber numberWithUint8:3],
-                              temperatureKey:[NSString stringWithFormat:@"%d\u00B0C", 30] };
+    NSNumber *trafficKey = @(2); // This is our custom-defined key for the icon ID, which is of type uint8_t.
+    NSDictionary *update = @{ trafficKey:relevantTrafficStr };
     return update;
 }
 

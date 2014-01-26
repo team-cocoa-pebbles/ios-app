@@ -84,10 +84,11 @@
                  return;*/
             }
         }
-        @catch (NSException *exception) {}
-        NSLog(@"JSON error: %@", jsonError);
-        message = @"Error parsing response";
-        showAlert();
+        @catch (NSException *exception) {
+            NSLog(@"JSON error: %@", jsonError);
+            message = @"Error parsing response";
+            showAlert();
+        }
         
         NSArray *resourceSets = [root objectForKey:@"resourceSets"];
         

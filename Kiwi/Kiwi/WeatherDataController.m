@@ -37,7 +37,6 @@
 
 - (NSString*)retrieveData:(CLLocationCoordinate2D) coordinate
 {
-    
     NSLog(@"Retrieving weather data");
     NSURL *weatherURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%F%@%f", self.weatherURLStr1, coordinate.latitude, self.weatherURLStr2, coordinate.longitude]];
     NSLog(@"URL: %@", weatherURL);
@@ -71,8 +70,9 @@
         
         // Parse the JSON response:
         NSError *jsonError = nil;
+                         
         NSDictionary *root = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-        NSLog(@"%@", root);
+        NSLog(@"Dictionary: %@", root);
         if(jsonError){
             NSLog(@"JSON error: %@", jsonError);
             message = @"Error parsing response";
@@ -80,9 +80,10 @@
         }
                          
         NSLog(@"JSON weather data loaded.");
-        NSString *description = [[root objectForKey:@"weather"] objectForKey:@"description"];
         NSString *temperature = [[root objectForKey:@"main"] objectForKey:@"temp"];
-                         
+        NSArray *weather = [root objectForKey:@"weather"];
+        NSString *description = [[weather objectAtIndex:0] objectForKey:@"description"];
+
         NSLog(@"description: %@ temperature: %@", description, temperature);
                          
                          
@@ -92,26 +93,6 @@
     return @"yay";
 
     
-    
-    
-
-   /* NSData *data;
-    NSError *error;
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:weatherURL
-                                                        cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                                        timeoutInterval:15.0f];
-    
-    [request setHTTPMethod:@"HEAD"];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                     queue:[NSOperationQueue mainQueue]
-                     completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
-                     NSURL *resolvedURL = [httpResponse URL];
-                     NSLog(@"%@", resolvedURL);
-     }];
-    
-    */
 }
 
 @end

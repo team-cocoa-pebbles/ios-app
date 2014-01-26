@@ -134,6 +134,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSLog(@"Launching Kiwi");
+    self.predictionController = [[PredictionController alloc] init];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     //self.logoImage = (UIImage*)(resizedImage:CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) interpolationQuality:1);
@@ -151,6 +153,11 @@
     
     // Initialize with the last connected watch:
     [self setTargetWatch:[[PBPebbleCentral defaultCentral] lastConnectedWatch]];
+    
+    // TEST
+    NSLog(@"Testing predictions");
+    [self.predictionController initiatePredictions];
+    
     return YES;
 }
 

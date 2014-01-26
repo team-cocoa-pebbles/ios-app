@@ -42,7 +42,7 @@
     NSLog(@"Lat: %f Long: %f", coordinate.latitude, coordinate.longitude);
     
     NSString *message = [self.weatherDataController retrieveData:coordinate];
-    NSLog([NSString stringWithFormat:@"%@", message]);
+    NSLog(@"cool");
 }
 
 

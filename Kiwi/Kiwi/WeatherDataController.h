@@ -14,6 +14,7 @@
 
 @property NSString *weatherURLStr1;
 @property NSString *weatherURLStr2;
+@property NSMutableData *weatherData;
 
 - (NSString*)retrieveData:(CLLocationCoordinate2D) coordinate;
 

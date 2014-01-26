@@ -11,16 +11,10 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface TrafficDataController : DataController
-{
-    NSLock *lock;
-    int lastSentIncident;
-    CLLocationCoordinate2D lastKnownPosition;
-}
+
 @property NSString *trafficURLStr1;
 @property NSString *trafficURLStr2;
 @property NSMutableArray *resourcesProperty;
 
-- (NSString*)retrieveData:(CLLocationCoordinate2D) currentPosition;
-- (NSString*)getMostRelevantTraffic;
-- (NSString*)findStreetNamesInDescription:(NSString *) description;
+- (NSString*)retrieveData:(CLLocationCoordinate2D) bottomLeft and:(CLLocationCoordinate2D) topRight;
 @end

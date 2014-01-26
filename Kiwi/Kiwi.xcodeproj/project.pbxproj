@@ -37,12 +37,14 @@
 		1D1AFDD61894E4900022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDD51894E4900022C53E /* PebbleVendor.framework */; };
 		1D1AFDD71894E4900022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDD51894E4900022C53E /* PebbleVendor.framework */; };
 		1D25C7B418950BC100E45692 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D25C7B318950BC100E45692 /* EventKit.framework */; };
-		1D25C7B618954D2F00E45692 /* kiwi_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D25C7B518954D2F00E45692 /* kiwi_logo.png */; };
-		1D25C7B818954F8D00E45692 /* kiwi_logo_shrunk.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D25C7B718954F8D00E45692 /* kiwi_logo_shrunk.png */; };
-		1D25C7BB1895511900E45692 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BA1895511900E45692 /* SettingsViewController.m */; };
-		1D25C7BC1895511900E45692 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BA1895511900E45692 /* SettingsViewController.m */; };
-		1D25C7BF1895529100E45692 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BE1895529100E45692 /* Settings.m */; };
-		1D25C7C01895529100E45692 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BE1895529100E45692 /* Settings.m */; };
+		1D25C7B618954D2F00E45692 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		1D25C7B818954F8D00E45692 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		1D25C7BB1895511900E45692 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		1D25C7BC1895511900E45692 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		1D25C7BF1895529100E45692 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		1D25C7C01895529100E45692 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		1D25C7C518955EBA00E45692 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7C218955EBA00E45692 /* Settings.m */; };
+		1D25C7C618955EBA00E45692 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7C418955EBA00E45692 /* SettingsViewController.m */; };
 		C90A7F8D1895590700514D9E /* CalendarDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90A7F8A1895590700514D9E /* CalendarDataController.m */; };
 		C90A7F8E1895590700514D9E /* TwitterDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90A7F8C1895590700514D9E /* TwitterDataController.m */; };
 		C9B436B018948B8C00FA2AA2 /* TrafficDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */; };
@@ -91,6 +93,10 @@
 		1D1AFDD21894E4890022C53E /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
 		1D1AFDD51894E4900022C53E /* PebbleVendor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleVendor.framework; sourceTree = "<group>"; };
 		1D25C7B318950BC100E45692 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		1D25C7C118955EBA00E45692 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		1D25C7C218955EBA00E45692 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		1D25C7C318955EBA00E45692 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1D25C7C418955EBA00E45692 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C90A7F891895590700514D9E /* CalendarDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDataController.h; sourceTree = "<group>"; };
 		C90A7F8A1895590700514D9E /* CalendarDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDataController.m; sourceTree = "<group>"; };
 		C90A7F8B1895590700514D9E /* TwitterDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterDataController.h; sourceTree = "<group>"; };
@@ -178,18 +184,12 @@
 		1D1AFD761893F6780022C53E /* Kiwi */ = {
 			isa = PBXGroup;
 			children = (
-				C90A7F891895590700514D9E /* CalendarDataController.h */,
-				C90A7F8A1895590700514D9E /* CalendarDataController.m */,
-				C90A7F8B1895590700514D9E /* TwitterDataController.h */,
-				C90A7F8C1895590700514D9E /* TwitterDataController.m */,
 				1D1AFD7F1893F6780022C53E /* AppDelegate.h */,
 				1D1AFD801893F6780022C53E /* AppDelegate.m */,
-				1D25C7B91895511900E45692 /* SettingsViewController.h */,
-				1D25C7BA1895511900E45692 /* SettingsViewController.m */,
-				1D25C7BD1895529100E45692 /* Settings.h */,
-				1D25C7BE1895529100E45692 /* Settings.m */,
-				1D25C7B518954D2F00E45692 /* kiwi_logo.png */,
-				1D25C7B718954F8D00E45692 /* kiwi_logo_shrunk.png */,
+				1D25C7C118955EBA00E45692 /* Settings.h */,
+				1D25C7C218955EBA00E45692 /* Settings.m */,
+				1D25C7C318955EBA00E45692 /* SettingsViewController.h */,
+				1D25C7C418955EBA00E45692 /* SettingsViewController.m */,
 				1D1AFDC81894613A0022C53E /* DataController.h */,
 				1D1AFDC91894613A0022C53E /* DataController.m */,
 				1D1AFDC4189460E30022C53E /* PredictionController.h */,
@@ -198,6 +198,10 @@
 				1D1AFDC118945F430022C53E /* WeatherDataController.m */,
 				C9B436AE18948B8C00FA2AA2 /* TrafficDataController.h */,
 				C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */,
+				C90A7F891895590700514D9E /* CalendarDataController.h */,
+				C90A7F8A1895590700514D9E /* CalendarDataController.m */,
+				C90A7F8B1895590700514D9E /* TwitterDataController.h */,
+				C90A7F8C1895590700514D9E /* TwitterDataController.m */,
 				1D1AFD881893F6780022C53E /* Images.xcassets */,
 				1D1AFD771893F6780022C53E /* Supporting Files */,
 			);
@@ -310,9 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1AFD891893F6780022C53E /* Images.xcassets in Resources */,
-				1D25C7B818954F8D00E45692 /* kiwi_logo_shrunk.png in Resources */,
+				1D25C7B818954F8D00E45692 /* (null) in Resources */,
 				1D1AFD7B1893F6780022C53E /* InfoPlist.strings in Resources */,
-				1D25C7B618954D2F00E45692 /* kiwi_logo.png in Resources */,
+				1D25C7B618954D2F00E45692 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,13 +338,15 @@
 				1D1AFD811893F6780022C53E /* AppDelegate.m in Sources */,
 				C90A7F8D1895590700514D9E /* CalendarDataController.m in Sources */,
 				1D1AFDC218945F430022C53E /* WeatherDataController.m in Sources */,
+				1D25C7C618955EBA00E45692 /* SettingsViewController.m in Sources */,
+				1D25C7C518955EBA00E45692 /* Settings.m in Sources */,
 				C90A7F8E1895590700514D9E /* TwitterDataController.m in Sources */,
 				1D1AFDC6189460E30022C53E /* PredictionController.m in Sources */,
 				C9B436B018948B8C00FA2AA2 /* TrafficDataController.m in Sources */,
 				1D1AFDCA1894613A0022C53E /* DataController.m in Sources */,
 				1D1AFD7D1893F6780022C53E /* main.m in Sources */,
-				1D25C7BF1895529100E45692 /* Settings.m in Sources */,
-				1D25C7BB1895511900E45692 /* SettingsViewController.m in Sources */,
+				1D25C7BF1895529100E45692 /* (null) in Sources */,
+				1D25C7BB1895511900E45692 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +356,8 @@
 			files = (
 				1D1AFDC318945F430022C53E /* WeatherDataController.m in Sources */,
 				1D1AFDCB1894613A0022C53E /* DataController.m in Sources */,
-				1D25C7C01895529100E45692 /* Settings.m in Sources */,
-				1D25C7BC1895511900E45692 /* SettingsViewController.m in Sources */,
+				1D25C7C01895529100E45692 /* (null) in Sources */,
+				1D25C7BC1895511900E45692 /* (null) in Sources */,
 				1D1AFD9C1893F6780022C53E /* KiwiTests.m in Sources */,
 				1D1AFDC7189460E30022C53E /* PredictionController.m in Sources */,
 			);

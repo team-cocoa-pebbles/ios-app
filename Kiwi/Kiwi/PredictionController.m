@@ -44,7 +44,7 @@
     NSLog(@"Lat: %f Long: %f", coordinate.latitude, coordinate.longitude);
     
     NSString *message = [self.weatherDataController retrieveData:coordinate];
-    NSLog([NSString stringWithFormat:@"%@", message]);
+    NSLog(@"%@", message);
     
     CLLocationCoordinate2D coordinateT1 = _locationManager.location.coordinate;
     coordinateT1.latitude -= 0.01;
@@ -64,7 +64,7 @@
     NSMutableArray *resources;
     message = [self.trafficDataController retrieveData:coordinateT1 and:coordinateT2];
     resources = [self.trafficDataController resourcesProperty];
-    NSLog([NSString stringWithFormat:@"%@", message]);
+    NSLog(@"%@", message);
 }
 
 

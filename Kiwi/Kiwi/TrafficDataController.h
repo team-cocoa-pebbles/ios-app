@@ -11,9 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface TrafficDataController : DataController
-{
-    NSLock *lock;
-}
+
 @property NSString *trafficURLStr1;
 @property NSString *trafficURLStr2;
 @property NSMutableArray *resourcesProperty;

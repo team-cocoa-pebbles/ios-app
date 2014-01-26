@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DataController : NSObject
+{
+    dispatch_semaphore_t semaphore;
+}
 
 - (NSString*)retrieveData:(NSDictionary*) dictionary;
 

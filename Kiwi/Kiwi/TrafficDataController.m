@@ -16,8 +16,7 @@
     if (self) {
         self.trafficURLStr1 = @"http://dev.virtualearth.net/REST/v1/Traffic/Incidents/";
         self.trafficURLStr2 = @"?key=Ag7zBcnhLP6EOOlh_hNBGVgHRXrkClUVOZu3LIKePOOm76-JcJsqecDlP5UfUanB";
-        lock = [[NSLock alloc] init];
-        [lock lock];
+        semaphore = dispatch_semaphore_create(0);
     }
     return self;
 }
@@ -102,9 +101,9 @@
             NSDictionary *resourcesDictionary = [resourcesArray objectAtIndex:i];
             [self.resourcesProperty addObject:resourcesDictionary];
         }
-        [lock unlock];
+        dispatch_semaphore_signal(semaphore);
     }];
-    [lock lock];
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     return @"yay";
 }
 

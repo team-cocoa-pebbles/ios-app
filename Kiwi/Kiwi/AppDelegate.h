@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PebbleKit/PebbleKit.h>
+#import "PredictionController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIImage *logoImage;
+@property (strong, nonatomic) PredictionController *predictionController;
+
 
 @end

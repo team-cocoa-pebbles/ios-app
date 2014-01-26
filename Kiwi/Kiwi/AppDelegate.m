@@ -22,6 +22,14 @@
         return;
     }
     
+    NSNumber *weatherKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
+    NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
+    NSDictionary *update = @{ weatherKey:[NSNumber numberWithInt8:3],
+                              temperatureKey:[NSNumber numberWithInt8:7] };
+    [_targetWatch appMessagesPushUpdate:update onSent:^(PBWatch *watch, NSDictionary *update, NSError *error) {
+        NSLog(@"Update sent!");
+    }];
+    
     // Fetch weather at current location using openweathermap.org's JSON API:
     
     /*NSString *apiURLString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.1/find/city?lat=%f&lon=%f&cnt=1", coordinate.latitude, coordinate.longitude];

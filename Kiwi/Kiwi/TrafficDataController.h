@@ -7,14 +7,21 @@
 //
 
 #import "DataController.h"
+#import <PebbleKit/PebbleKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface TrafficDataController : DataController
+@interface TrafficDataController : DataController {
+    int lastSentIncident;
+    CLLocationCoordinate2D lastKnownPosition;
+}
 
 @property NSString *trafficURLStr1;
 @property NSString *trafficURLStr2;
 @property NSMutableArray *resourcesProperty;
 
-- (NSString*)retrieveData:(CLLocationCoordinate2D) bottomLeft and:(CLLocationCoordinate2D) topRight;
+- (NSDictionary*)retrieveData:(CLLocationCoordinate2D) currentPosition;
+- (NSString*)getMostRelevantTraffic;
+- (NSString*)findStreetNamesInDescription:(NSString *) description;
+
 @end

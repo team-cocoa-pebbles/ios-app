@@ -35,61 +35,25 @@
     return self;
 }
 
--(void)initiatePredictions
+-(NSDictionary*)initiatePredictions
 {
-    [self updateData];
-}
-
--(void)updateData
-{
-    NSArray *calendars = [_eventStore
-                          calendarsForEntityType:EKEntityTypeReminder];
-    NSLog(@"Getting calendars");
-    for (EKCalendar *calendar in calendars)
-    {
-        NSLog(@"Calendar = %@", calendar.title);
-    }
-    
-    /*EKEventStore *eventStore = [[[EKEventStore alloc] init] autorelease];
-    EKEvent *events = [EKEvent eventWithEventStore:eventStore];
-    NSArray *caleandarsArray = [[NSArray alloc] init];
-    caleandarsArray = [[eventStore calendars] retain];
-    
-    for (EKCalendar *iCalendars in caleandarsArray)
-    {
-        NSLog(@"Calendar Title : %@", iCalendars.title);
-        
-    }*/
-    
-    
     CLLocationCoordinate2D coordinate = _locationManager.location.coordinate;
     NSLog(@"Lat: %f Long: %f", coordinate.latitude, coordinate.longitude);
     
+    NSDictionary *weatherUpdate = [self.weatherDataController retrieveData:coordinate];
+    NSLog(@"Weather Update: %@", weatherUpdate);
     
-    NSString *message = [self.weatherDataController retrieveData:coordinate];
-    NSLog(@"%@", message);
+    NSLog(@"Lat: %f Long: %f", coordinate.latitude, coordinate.longitude);
     
-    CLLocationCoordinate2D coordinateT1 = _locationManager.location.coordinate;
-    coordinateT1.latitude -= 0.01;
-    coordinateT1.longitude += 0.01;
-    CLLocationCoordinate2D coordinateT2 = _locationManager.location.coordinate;
-    coordinateT2.latitude += 0.01;
-    coordinateT2.longitude -= 0.01;
- /*
-    coordinateT1.latitude = -0.01;
-    coordinateT1.longitude = 0.01;
-    CLLocationCoordinate2D coordinateT2 = _locationManager.location.coordinate;
-    coordinateT2.latitude = 0.01;
-    coordinateT2.longitude = -0.01;
-*/
-    NSLog(@"T1: Lat: %f Long: %f", coordinateT1.latitude, coordinateT1.longitude);
-        NSLog(@"T2: Lat: %f Long: %f", coordinateT2.latitude, coordinateT2.longitude);
-    NSMutableArray *resources;
-    message = [self.trafficDataController retrieveData:coordinateT1 and:coordinateT2];
-    resources = [self.trafficDataController resourcesProperty];
-    NSLog(@"%@", message);
+    CLLocationCoordinate2D coordinateT = _locationManager.location.coordinate;
+    
+    NSLog(@"T1: Lat: %f Long: %f", coordinateT.latitude, coordinateT.longitude);
+    NSDictionary *trafficUpdate = [self.trafficDataController retrieveData:coordinateT];
+    NSLog(@"Traffic Update: %@", trafficUpdate);
+    
+    NSDictionary *relevantUpdate = weatherUpdate;
+    
+    return relevantUpdate;
 }
-
-
 
 @end

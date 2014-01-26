@@ -10,11 +10,4 @@
 
 @implementation DataController
 
-- (NSString*)retrieveData:(NSDictionary*) dictionary
-{
-    NSString *alertStr = @"NO! I'm supposed to be an abstract class! Don't instantiate me!";
-    NSLog(@"%@", alertStr);
-    return alertStr;
-}
-
 @end

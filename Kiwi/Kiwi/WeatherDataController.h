@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <PebbleKit/PebbleKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "DataController.h"
 
@@ -16,6 +17,6 @@
 @property NSString *weatherURLStr2;
 @property NSMutableData *weatherData;
 
-- (NSString*)retrieveData:(CLLocationCoordinate2D) coordinate;
+- (NSDictionary*)retrieveData:(CLLocationCoordinate2D) coordinate;
 
 @end

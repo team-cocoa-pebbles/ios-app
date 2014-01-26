@@ -16,6 +16,6 @@
 @property (strong, nonatomic) WeatherDataController *weatherDataController;
 @property (strong, nonatomic) TrafficDataController *trafficDataController;
 
--(void)initiatePredictions;
+-(NSDictionary*)initiatePredictions;
 
 @end

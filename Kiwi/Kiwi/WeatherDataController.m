@@ -17,7 +17,6 @@
 {
     self.weatherURLStr1 = @"http://api.openweathermap.org/data/2.5/weather?lat=";
     self.weatherURLStr2 = @"&lon=";
-    //lock = [[NSLock alloc] init];
     semaphore = dispatch_semaphore_create(0);
     return self;
 }
@@ -35,7 +34,7 @@
     return newRequest;
 }
 
-- (NSString*)retrieveData:(CLLocationCoordinate2D) coordinate
+- (NSDictionary*)retrieveData:(CLLocationCoordinate2D) coordinate
 {
     NSLog(@"Retrieving weather data");
     NSURL *weatherURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%F%@%f", self.weatherURLStr1, coordinate.latitude, self.weatherURLStr2, coordinate.longitude]];
@@ -90,9 +89,12 @@
         dispatch_semaphore_signal(semaphore);
     }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    return @"yay";
-
     
+    NSNumber *iconKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
+    NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
+    NSDictionary *update = @{ iconKey:[NSNumber numberWithUint8:3],
+                              temperatureKey:[NSString stringWithFormat:@"%d\u00B0C", 30] };
+    return update;
 }
 
 @end

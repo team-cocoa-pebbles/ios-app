@@ -18,22 +18,21 @@
 @synthesize timer;
 
 - (void)updatePredictions:(id)sender {
-    [self.predictionController initiatePredictions];
-}
-
-- (void)refreshAction:(id)sender {
     if (_targetWatch == nil || [_targetWatch isConnected] == NO) {
         [[[UIAlertView alloc] initWithTitle:nil message:@"No connected watch!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         return;
     }
-
-    NSNumber *iconKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
-    NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
-    NSDictionary *update = @{ iconKey:[NSNumber numberWithUint8:3],
-                              temperatureKey:[NSString stringWithFormat:@"%d\u00B0C", 30] };
+    
+    NSDictionary *update = [self.predictionController initiatePredictions];
     [_targetWatch appMessagesPushUpdate:update onSent:^(PBWatch *watch, NSDictionary *update, NSError *error) {
         NSLog(@"Update sent!");
     }];
+}
+
+- (void)refreshAction:(id)sender {
+
+
+
 }
 
 
@@ -74,7 +73,7 @@
 {
     NSLog(@"Launching Kiwi");
     self.predictionController = [[PredictionController alloc] init];
-    predictionInterval = 60000;
+    predictionInterval = 10;//60000;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

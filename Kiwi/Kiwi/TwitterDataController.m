@@ -63,21 +63,22 @@
                                    return;
                                }
                                
-                               // Parse the JSON response:
-                               NSError *jsonError = nil;
                                
                                NSString* newStr = [[NSString alloc] initWithData:data
                                                                         encoding:NSUTF8StringEncoding];
-                               NSArray *chunks = [newStr componentsSeparatedByString: @"\n"];
+                               quote = [[newStr componentsSeparatedByString: @"\n"] objectAtIndex:0];
                                //NSLog(@"Dictionary: %@", root);
-                               
-                               
                                dispatch_semaphore_signal(semaphore);
+
+
+
                            }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    return @"yay";
     
+    NSNumber *stringKey = @(0);
+    NSDictionary *update = @{stringKey:quote};
     
+    return update;
 }
 
 @end

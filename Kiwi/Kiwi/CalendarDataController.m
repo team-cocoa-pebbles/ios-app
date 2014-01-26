@@ -26,7 +26,7 @@
     return self;
 }
 
-- (NSDictionary*)retrieveData:(NSDictionary *)dictionary
+- (NSDictionary*)retrieveData
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     // Create the start date components

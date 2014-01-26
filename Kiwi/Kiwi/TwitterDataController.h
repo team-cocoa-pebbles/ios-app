@@ -7,10 +7,11 @@
 //
 
 #import "DataController.h"
+#import <PebbleKit/PebbleKit.h>
 
 @interface TwitterDataController : DataController
 {
-    
+    NSString *quote;
 }
 
 @property NSString *url;

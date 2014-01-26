@@ -15,6 +15,6 @@
     EKEventStore* eventStore;
     NSDateFormatter* dateFormatter;
 }
-- (NSDictionary*)retrieveData:(NSDictionary*) dictionary;
+- (NSDictionary*)retrieveData;
 
 @end

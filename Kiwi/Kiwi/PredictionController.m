@@ -31,6 +31,8 @@
     [_locationManager startUpdatingLocation];
     self.weatherDataController = [[WeatherDataController alloc] init];
     self.trafficDataController = [[TrafficDataController alloc] init];
+    self.twitterDataController = [[TwitterDataController alloc] init];
+    self.calendarDataController = [[CalendarDataController alloc] init];
     
     return self;
 }
@@ -50,6 +52,12 @@
     NSLog(@"T1: Lat: %f Long: %f", coordinateT.latitude, coordinateT.longitude);
     NSDictionary *trafficUpdate = [self.trafficDataController retrieveData:coordinateT];
     NSLog(@"Traffic Update: %@", trafficUpdate);
+    
+    NSDictionary *twitterUpdate = [self.twitterDataController retrieveData];
+    
+    NSLog(@"Quote Update: %@", twitterUpdate);
+    
+    NSDictionary *calendarUpdate = [self.calendarDataController retrieveData];
     
     NSDictionary *relevantUpdate = weatherUpdate;
     

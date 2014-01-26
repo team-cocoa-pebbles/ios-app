@@ -34,7 +34,7 @@
     //[UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height
     self.logoImage = [UIImage imageWithContentsOfFile:@"kiwi_logo_shrunk.png"];
     self.logoImageView = [[UIImageView alloc] initWithImage:self.logoImage];
-    self.logoImageView.frame = CGRectMake(0,0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    self.logoImageView.frame = CGRectMake(0,0, [UIScreen mainScreen].bounds.size.width, 100);
     [self.logoView addSubview:self.logoImageView];
     [self.view addSubview:self.logoView];
     

@@ -10,9 +10,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import "WeatherDataController.h"
 #import "TrafficDataController.h"
+<<<<<<< HEAD
+#import "Settings.h"
+=======
 #import "TwitterDataController.h"
 #import "CalendarDataController.h"
-#import "Settings.h"
+>>>>>>> fc356bc5172150ee719ebd1b494c11a4dc37ae74
 
 @interface PredictionController : NSObject
 

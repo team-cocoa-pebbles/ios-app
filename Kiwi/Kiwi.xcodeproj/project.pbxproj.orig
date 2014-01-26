@@ -19,8 +19,6 @@
 		1D1AFD921893F6780022C53E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFD741893F6780022C53E /* UIKit.framework */; };
 		1D1AFD9A1893F6780022C53E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D1AFD981893F6780022C53E /* InfoPlist.strings */; };
 		1D1AFD9C1893F6780022C53E /* KiwiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFD9B1893F6780022C53E /* KiwiTests.m */; };
-		1D1AFDA91893F80F0022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDA81893F80F0022C53E /* PebbleVendor.framework */; };
-		1D1AFDAA1893F80F0022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDA81893F80F0022C53E /* PebbleVendor.framework */; };
 		1D1AFDAC1893F83A0022C53E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDAB1893F83A0022C53E /* CoreMotion.framework */; };
 		1D1AFDAE1893F86B0022C53E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDAD1893F86B0022C53E /* CFNetwork.framework */; };
 		1D1AFDB01893F8760022C53E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDAF1893F8760022C53E /* CoreLocation.framework */; };
@@ -34,13 +32,23 @@
 		1D1AFDC7189460E30022C53E /* PredictionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFDC5189460E30022C53E /* PredictionController.m */; };
 		1D1AFDCA1894613A0022C53E /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFDC91894613A0022C53E /* DataController.m */; };
 		1D1AFDCB1894613A0022C53E /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AFDC91894613A0022C53E /* DataController.m */; };
+		1D1AFDD31894E4890022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDD21894E4890022C53E /* PebbleKit.framework */; };
+		1D1AFDD41894E4890022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDD21894E4890022C53E /* PebbleKit.framework */; };
+		1D1AFDD61894E4900022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDD51894E4900022C53E /* PebbleVendor.framework */; };
+		1D1AFDD71894E4900022C53E /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDD51894E4900022C53E /* PebbleVendor.framework */; };
+		1D25C7B418950BC100E45692 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D25C7B318950BC100E45692 /* EventKit.framework */; };
 <<<<<<< HEAD
-		1D1AFDCD18948BAB0022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDCC18948BAB0022C53E /* PebbleKit.framework */; };
-		1D1AFDCE18948BAB0022C53E /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1AFDCC18948BAB0022C53E /* PebbleKit.framework */; };
+		1D25C7B618954D2F00E45692 /* kiwi_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D25C7B518954D2F00E45692 /* kiwi_logo.png */; };
+		1D25C7B818954F8D00E45692 /* kiwi_logo_shrunk.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D25C7B718954F8D00E45692 /* kiwi_logo_shrunk.png */; };
+		1D25C7BB1895511900E45692 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BA1895511900E45692 /* SettingsViewController.m */; };
+		1D25C7BC1895511900E45692 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BA1895511900E45692 /* SettingsViewController.m */; };
+		1D25C7BF1895529100E45692 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BE1895529100E45692 /* Settings.m */; };
+		1D25C7C01895529100E45692 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25C7BE1895529100E45692 /* Settings.m */; };
 =======
+		C90A7F8D1895590700514D9E /* CalendarDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90A7F8A1895590700514D9E /* CalendarDataController.m */; };
+		C90A7F8E1895590700514D9E /* TwitterDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90A7F8C1895590700514D9E /* TwitterDataController.m */; };
+>>>>>>> fc356bc5172150ee719ebd1b494c11a4dc37ae74
 		C9B436B018948B8C00FA2AA2 /* TrafficDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */; };
-		C9B436B218948BD500FA2AA2 /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B436B118948BD500FA2AA2 /* PebbleKit.framework */; };
->>>>>>> 8b6d746d719e813cadf9e7d42a5b635f207b9c3c
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +78,6 @@
 		1D1AFD971893F6780022C53E /* KiwiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiwiTests-Info.plist"; sourceTree = "<group>"; };
 		1D1AFD991893F6780022C53E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D1AFD9B1893F6780022C53E /* KiwiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiwiTests.m; sourceTree = "<group>"; };
-		1D1AFDA81893F80F0022C53E /* PebbleVendor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleVendor.framework; sourceTree = "<group>"; };
 		1D1AFDAB1893F83A0022C53E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		1D1AFDAD1893F86B0022C53E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1D1AFDAF1893F8760022C53E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -84,13 +91,24 @@
 		1D1AFDC5189460E30022C53E /* PredictionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PredictionController.m; sourceTree = "<group>"; };
 		1D1AFDC81894613A0022C53E /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		1D1AFDC91894613A0022C53E /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		1D1AFDD21894E4890022C53E /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
+		1D1AFDD51894E4900022C53E /* PebbleVendor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleVendor.framework; sourceTree = "<group>"; };
+		1D25C7B318950BC100E45692 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 <<<<<<< HEAD
-		1D1AFDCC18948BAB0022C53E /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
+		1D25C7B518954D2F00E45692 /* kiwi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kiwi_logo.png; sourceTree = "<group>"; };
+		1D25C7B718954F8D00E45692 /* kiwi_logo_shrunk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kiwi_logo_shrunk.png; sourceTree = "<group>"; };
+		1D25C7B91895511900E45692 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1D25C7BA1895511900E45692 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		1D25C7BD1895529100E45692 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		1D25C7BE1895529100E45692 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 =======
+		C90A7F891895590700514D9E /* CalendarDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDataController.h; sourceTree = "<group>"; };
+		C90A7F8A1895590700514D9E /* CalendarDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDataController.m; sourceTree = "<group>"; };
+		C90A7F8B1895590700514D9E /* TwitterDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterDataController.h; sourceTree = "<group>"; };
+		C90A7F8C1895590700514D9E /* TwitterDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterDataController.m; sourceTree = "<group>"; };
+>>>>>>> fc356bc5172150ee719ebd1b494c11a4dc37ae74
 		C9B436AE18948B8C00FA2AA2 /* TrafficDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficDataController.h; sourceTree = "<group>"; };
 		C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficDataController.m; sourceTree = "<group>"; };
-		C9B436B118948BD500FA2AA2 /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
->>>>>>> 8b6d746d719e813cadf9e7d42a5b635f207b9c3c
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,15 +120,14 @@
 				1D1AFDB61893F8A20022C53E /* ExternalAccessory.framework in Frameworks */,
 				1D1AFDB41893F8960022C53E /* CoreBluetooth.framework in Frameworks */,
 				1D1AFDB21893F88B0022C53E /* MessageUI.framework in Frameworks */,
-				C9B436B218948BD500FA2AA2 /* PebbleKit.framework in Frameworks */,
 				1D1AFDB01893F8760022C53E /* CoreLocation.framework in Frameworks */,
 				1D1AFDAE1893F86B0022C53E /* CFNetwork.framework in Frameworks */,
+				1D1AFDD61894E4900022C53E /* PebbleVendor.framework in Frameworks */,
 				1D1AFDAC1893F83A0022C53E /* CoreMotion.framework in Frameworks */,
 				1D1AFD731893F6780022C53E /* CoreGraphics.framework in Frameworks */,
-				1D1AFDA91893F80F0022C53E /* PebbleVendor.framework in Frameworks */,
-				1D1AFDCD18948BAB0022C53E /* PebbleKit.framework in Frameworks */,
 				1D1AFD751893F6780022C53E /* UIKit.framework in Frameworks */,
 				1D1AFD711893F6780022C53E /* Foundation.framework in Frameworks */,
+				1D1AFDD31894E4890022C53E /* PebbleKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,10 +135,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D25C7B418950BC100E45692 /* EventKit.framework in Frameworks */,
 				1D1AFD901893F6780022C53E /* XCTest.framework in Frameworks */,
-				1D1AFDAA1893F80F0022C53E /* PebbleVendor.framework in Frameworks */,
+				1D1AFDD71894E4900022C53E /* PebbleVendor.framework in Frameworks */,
+				1D1AFDD41894E4890022C53E /* PebbleKit.framework in Frameworks */,
 				1D1AFD921893F6780022C53E /* UIKit.framework in Frameworks */,
-				1D1AFDCE18948BAB0022C53E /* PebbleKit.framework in Frameworks */,
 				1D1AFD911893F6780022C53E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,7 +150,6 @@
 		1D1AFD641893F6770022C53E = {
 			isa = PBXGroup;
 			children = (
-				C9B436B118948BD500FA2AA2 /* PebbleKit.framework */,
 				1D1AFD761893F6780022C53E /* Kiwi */,
 				1D1AFD951893F6780022C53E /* KiwiTests */,
 				1D1AFD6F1893F6780022C53E /* Frameworks */,
@@ -152,7 +169,9 @@
 		1D1AFD6F1893F6780022C53E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D1AFDCC18948BAB0022C53E /* PebbleKit.framework */,
+				1D25C7B318950BC100E45692 /* EventKit.framework */,
+				1D1AFDD51894E4900022C53E /* PebbleVendor.framework */,
+				1D1AFDD21894E4890022C53E /* PebbleKit.framework */,
 				1D1AFDBB189431080022C53E /* libz.dylib */,
 				1D1AFDB51893F8A20022C53E /* ExternalAccessory.framework */,
 				1D1AFDB31893F8960022C53E /* CoreBluetooth.framework */,
@@ -160,7 +179,6 @@
 				1D1AFDAF1893F8760022C53E /* CoreLocation.framework */,
 				1D1AFDAD1893F86B0022C53E /* CFNetwork.framework */,
 				1D1AFDAB1893F83A0022C53E /* CoreMotion.framework */,
-				1D1AFDA81893F80F0022C53E /* PebbleVendor.framework */,
 				1D1AFD701893F6780022C53E /* Foundation.framework */,
 				1D1AFD721893F6780022C53E /* CoreGraphics.framework */,
 				1D1AFD741893F6780022C53E /* UIKit.framework */,
@@ -172,19 +190,26 @@
 		1D1AFD761893F6780022C53E /* Kiwi */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
-				C9B436AE18948B8C00FA2AA2 /* TrafficDataController.h */,
-				C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */,
->>>>>>> 8b6d746d719e813cadf9e7d42a5b635f207b9c3c
+				C90A7F891895590700514D9E /* CalendarDataController.h */,
+				C90A7F8A1895590700514D9E /* CalendarDataController.m */,
+				C90A7F8B1895590700514D9E /* TwitterDataController.h */,
+				C90A7F8C1895590700514D9E /* TwitterDataController.m */,
 				1D1AFD7F1893F6780022C53E /* AppDelegate.h */,
 				1D1AFD801893F6780022C53E /* AppDelegate.m */,
+				1D25C7B91895511900E45692 /* SettingsViewController.h */,
+				1D25C7BA1895511900E45692 /* SettingsViewController.m */,
+				1D25C7BD1895529100E45692 /* Settings.h */,
+				1D25C7BE1895529100E45692 /* Settings.m */,
+				1D25C7B518954D2F00E45692 /* kiwi_logo.png */,
+				1D25C7B718954F8D00E45692 /* kiwi_logo_shrunk.png */,
 				1D1AFDC81894613A0022C53E /* DataController.h */,
 				1D1AFDC91894613A0022C53E /* DataController.m */,
 				1D1AFDC4189460E30022C53E /* PredictionController.h */,
 				1D1AFDC5189460E30022C53E /* PredictionController.m */,
 				1D1AFDC018945F430022C53E /* WeatherDataController.h */,
 				1D1AFDC118945F430022C53E /* WeatherDataController.m */,
+				C9B436AE18948B8C00FA2AA2 /* TrafficDataController.h */,
+				C9B436AF18948B8C00FA2AA2 /* TrafficDataController.m */,
 				1D1AFD881893F6780022C53E /* Images.xcassets */,
 				1D1AFD771893F6780022C53E /* Supporting Files */,
 			);
@@ -297,7 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1AFD891893F6780022C53E /* Images.xcassets in Resources */,
+				1D25C7B818954F8D00E45692 /* kiwi_logo_shrunk.png in Resources */,
 				1D1AFD7B1893F6780022C53E /* InfoPlist.strings in Resources */,
+				1D25C7B618954D2F00E45692 /* kiwi_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,11 +344,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1AFD811893F6780022C53E /* AppDelegate.m in Sources */,
+				C90A7F8D1895590700514D9E /* CalendarDataController.m in Sources */,
 				1D1AFDC218945F430022C53E /* WeatherDataController.m in Sources */,
+				C90A7F8E1895590700514D9E /* TwitterDataController.m in Sources */,
 				1D1AFDC6189460E30022C53E /* PredictionController.m in Sources */,
 				C9B436B018948B8C00FA2AA2 /* TrafficDataController.m in Sources */,
 				1D1AFDCA1894613A0022C53E /* DataController.m in Sources */,
 				1D1AFD7D1893F6780022C53E /* main.m in Sources */,
+				1D25C7BF1895529100E45692 /* Settings.m in Sources */,
+				1D25C7BB1895511900E45692 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +362,8 @@
 			files = (
 				1D1AFDC318945F430022C53E /* WeatherDataController.m in Sources */,
 				1D1AFDCB1894613A0022C53E /* DataController.m in Sources */,
+				1D25C7C01895529100E45692 /* Settings.m in Sources */,
+				1D25C7BC1895511900E45692 /* SettingsViewController.m in Sources */,
 				1D1AFD9C1893F6780022C53E /* KiwiTests.m in Sources */,
 				1D1AFDC7189460E30022C53E /* PredictionController.m in Sources */,
 			);
@@ -445,12 +478,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-<<<<<<< HEAD
-					"/Users/Francesca/Documents/ios-app/Kiwi",
-=======
-					/Users/Francesca/Documents/Kiwi,
 					"/Users/laurencewong/Documents/School/hackTECH\\ 2014/ios-app/Kiwi",
->>>>>>> 8b6d746d719e813cadf9e7d42a5b635f207b9c3c
+					"/Users/Francesca/Documents/ios-app/Kiwi",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kiwi/Kiwi-Prefix.pch";
@@ -468,12 +497,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-<<<<<<< HEAD
-					"/Users/Francesca/Documents/ios-app/Kiwi",
-=======
-					/Users/Francesca/Documents/Kiwi,
 					"/Users/laurencewong/Documents/School/hackTECH\\ 2014/ios-app/Kiwi",
->>>>>>> 8b6d746d719e813cadf9e7d42a5b635f207b9c3c
+					"/Users/Francesca/Documents/ios-app/Kiwi",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kiwi/Kiwi-Prefix.pch";
@@ -491,9 +516,6 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kiwi.app/Kiwi";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					/Users/Francesca/Documents/Kiwi,
 					"/Users/Francesca/Documents/ios-app/Kiwi",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -516,9 +538,6 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kiwi.app/Kiwi";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					/Users/Francesca/Documents/Kiwi,
 					"/Users/Francesca/Documents/ios-app/Kiwi",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -9,5 +9,10 @@
 #import "DataController.h"
 
 @interface TwitterDataController : DataController
+{
+    
+}
 
+@property NSString *url;
+- (NSDictionary*)retrieveData;
 @end

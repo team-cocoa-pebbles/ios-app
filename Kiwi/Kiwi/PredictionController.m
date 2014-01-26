@@ -28,6 +28,8 @@
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
     
+    self.weatherDataController = [[WeatherDataController alloc] init];
+    
     return self;
 }
 
@@ -42,7 +44,7 @@
     NSLog(@"Lat: %f Long: %f", coordinate.latitude, coordinate.longitude);
     
     NSString *message = [self.weatherDataController retrieveData:coordinate];
-    NSLog(@"cool");
+    NSLog(message);
 }
 
 

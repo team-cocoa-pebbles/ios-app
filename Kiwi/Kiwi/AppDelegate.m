@@ -13,7 +13,12 @@
 
 @implementation AppDelegate {
     PBWatch *_targetWatch;
-    //CLLocationManager *_locationManager;
+}
+
+@synthesize timer;
+
+- (void)updatePredictions:(id)sender {
+    [self.predictionController initiatePredictions];
 }
 
 - (void)refreshAction:(id)sender {
@@ -21,88 +26,14 @@
         [[[UIAlertView alloc] initWithTitle:nil message:@"No connected watch!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         return;
     }
-    
-    NSNumber *weatherKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
+
+    NSNumber *iconKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
     NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
-    NSDictionary *update = @{ weatherKey:[NSNumber numberWithInt8:3],
-                              temperatureKey:[NSNumber numberWithInt8:7] };
+    NSDictionary *update = @{ iconKey:[NSNumber numberWithUint8:3],
+                              temperatureKey:[NSString stringWithFormat:@"%d\u00B0C", 30] };
     [_targetWatch appMessagesPushUpdate:update onSent:^(PBWatch *watch, NSDictionary *update, NSError *error) {
         NSLog(@"Update sent!");
     }];
-    
-    // Fetch weather at current location using openweathermap.org's JSON API:
-    
-    /*NSString *apiURLString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.1/find/city?lat=%f&lon=%f&cnt=1", coordinate.latitude, coordinate.longitude];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:apiURLString]];
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        NSHTTPURLResponse *httpResponse = nil;
-        if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-            httpResponse = (NSHTTPURLResponse *) response;
-        }
-        
-        // NSURLConnection's completionHandler is called on the background thread.
-        // Prepare a block to show an alert on the main thread:
-        __block NSString *message = @"";
-        void (^showAlert)(void) = ^{
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                [[[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-            }];
-        };
-        
-        // Check for error or non-OK statusCode:
-        if (error || httpResponse.statusCode != 200) {
-            message = @"Error fetching weather";
-            NSLog(@"URL error: %@", error);
-            showAlert();
-            return;
-        }
-        
-        // Parse the JSON response:
-        NSError *jsonError = nil;
-        NSDictionary *root = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-        NSLog(@"%@", root);
-        @try {
-         if (jsonError == nil && root) {
-         // TODO: type checking / validation, this is really dangerous...
-         NSDictionary *firstListItem = [root[@"list"] objectAtIndex:0];
-         NSDictionary *main = firstListItem[@"main"];
-         
-         // Get the temperature:
-         NSNumber *temperatureNumber = main[@"temp"]; // in degrees Kelvin
-         int temperature = [temperatureNumber integerValue] - 273.15;
-         
-         // Get weather icon:
-         NSNumber *weatherIconNumber = firstListItem[@"weather"][0][@"icon"];
-        uint8_t weatherIconID = 2;
-         
-         // Send data to watch:
-         // See demos/feature_app_messages/weather.c in the native watch app SDK for the same definitions on the watch's end:
-         NSNumber *iconKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
-         NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
-         NSDictionary *update = @{ iconKey:[NSNumber numberWithUint8:weatherIconID],
-         temperatureKey:[NSString stringWithFormat:@"%d\u00B0C", temperature] };
-         [_targetWatch appMessagesPushUpdate:update onSent:^(PBWatch *watch, NSDictionary *update, NSError *error) {
-         message = error ? [error localizedDescription] : @"Update sent!";
-         showAlert();
-         }];
-         return;
-         }
-         }
-         @catch (NSException *exception) {}
-        NSLog(@"JSON error: %@", jsonError);
-        message = @"Error parsing response";
-        showAlert();
-        
-        NSNumber *iconKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
-        NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
-        NSDictionary *update = @{ iconKey:[NSNumber numberWithUint8:3],
-                                  temperatureKey:[NSString stringWithFormat:@"%d\u00B0C", 30] };
-        [_targetWatch appMessagesPushUpdate:update onSent:^(PBWatch *watch, NSDictionary *update, NSError *error) {
-            message = error ? [error localizedDescription] : @"Update sent!";
-            showAlert();
-        }];
-    }];*/
 }
 
 
@@ -143,6 +74,7 @@
 {
     NSLog(@"Launching Kiwi");
     self.predictionController = [[PredictionController alloc] init];
+    predictionInterval = 60000;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -154,7 +86,6 @@
     [refreshButton addTarget:self action:@selector(refreshAction:) forControlEvents:UIControlEventTouchUpInside];
     [refreshButton setFrame:CGRectMake(10, 100, 300, 100)];
     [self.window addSubview:refreshButton];
-    [self.predictionController initiatePredictions];
     [self.window makeKeyAndVisible];
     
     // We'd like to get called when Pebbles connect and disconnect, so become the delegate of PBPebbleCentral:
@@ -163,9 +94,9 @@
     // Initialize with the last connected watch:
     [self setTargetWatch:[[PBPebbleCentral defaultCentral] lastConnectedWatch]];
     
-    // TEST
-    NSLog(@"Testing predictions");
-    [self.predictionController initiatePredictions];
+    // Tie update method to a timer
+    NSLog(@"Update predictions attached to timer");
+    timer = [NSTimer scheduledTimerWithTimeInterval: predictionInterval target:self selector:@selector(updatePredictions:) userInfo:nil repeats: YES];
     
     return YES;
 }

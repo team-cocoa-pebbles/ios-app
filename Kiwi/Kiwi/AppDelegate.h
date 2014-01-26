@@ -11,10 +11,16 @@
 #import "PredictionController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    NSTimer *timer;
+    NSInteger predictionInterval;
+}
 
+@property (nonatomic, retain) NSTimer *timer;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UIImage *logoImage;
 @property (strong, nonatomic) PredictionController *predictionController;
+
 
 
 @end

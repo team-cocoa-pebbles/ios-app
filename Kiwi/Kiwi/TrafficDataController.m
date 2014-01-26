@@ -56,7 +56,7 @@
         // Parse the JSON response:
         NSError *jsonError = nil;
         NSDictionary *root = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-        NSLog(@"%@", root);
+        //NSLog(@"%@", root);
         @try {
             if (jsonError == nil && root) {
                 /*// TODO: type checking / validation, this is really dangerous...

@@ -7,6 +7,7 @@
 //
 
 #import "PredictionController.h"
+#import <EventKit/EventKit.h>
 
 @interface PredictionController () <CLLocationManagerDelegate>
 
@@ -15,6 +16,7 @@
 @implementation PredictionController
 {
     CLLocationManager *_locationManager;
+    EKEventStore *_eventStore;
 }
 
 -(id)init
@@ -40,8 +42,29 @@
 
 -(void)updateData
 {
+    NSArray *calendars = [_eventStore
+                          calendarsForEntityType:EKEntityTypeReminder];
+    NSLog(@"Getting calendars");
+    for (EKCalendar *calendar in calendars)
+    {
+        NSLog(@"Calendar = %@", calendar.title);
+    }
+    
+    /*EKEventStore *eventStore = [[[EKEventStore alloc] init] autorelease];
+    EKEvent *events = [EKEvent eventWithEventStore:eventStore];
+    NSArray *caleandarsArray = [[NSArray alloc] init];
+    caleandarsArray = [[eventStore calendars] retain];
+    
+    for (EKCalendar *iCalendars in caleandarsArray)
+    {
+        NSLog(@"Calendar Title : %@", iCalendars.title);
+        
+    }*/
+    
+    
     CLLocationCoordinate2D coordinate = _locationManager.location.coordinate;
     NSLog(@"Lat: %f Long: %f", coordinate.latitude, coordinate.longitude);
+    
     
     NSString *message = [self.weatherDataController retrieveData:coordinate];
     NSLog(@"%@", message);

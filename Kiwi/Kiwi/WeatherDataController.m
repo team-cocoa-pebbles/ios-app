@@ -72,7 +72,7 @@
         NSError *jsonError = nil;
                          
         NSDictionary *root = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-        NSLog(@"Dictionary: %@", root);
+        //NSLog(@"Dictionary: %@", root);
         if(jsonError){
             NSLog(@"JSON error: %@", jsonError);
             message = @"Error parsing response";

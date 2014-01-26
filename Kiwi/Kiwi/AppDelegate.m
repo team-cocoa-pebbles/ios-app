@@ -29,13 +29,6 @@
     }];
 }
 
-- (void)refreshAction:(id)sender {
-
-
-
-}
-
-
 - (void)setTargetWatch:(PBWatch*)watch {
     NSLog(@"Setting target watch");
     _targetWatch = watch;
@@ -73,18 +66,11 @@
 {
     NSLog(@"Launching Kiwi");
     self.predictionController = [[PredictionController alloc] init];
-    predictionInterval = 10;//60000;
+    self.settingsViewController = [[SettingsViewController alloc] init];
+    predictionInterval = 60000;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    //self.logoImage = (UIImage*)(resizedImage:CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) interpolationQuality:1);
-    self.predictionController = [[PredictionController alloc] init];
-    
-    UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [refreshButton setTitle:@"Fetch Weather" forState:UIControlStateNormal];
-    [refreshButton addTarget:self action:@selector(refreshAction:) forControlEvents:UIControlEventTouchUpInside];
-    [refreshButton setFrame:CGRectMake(10, 100, 300, 100)];
-    [self.window addSubview:refreshButton];
+    self.window.rootViewController = self.settingsViewController;
     [self.window makeKeyAndVisible];
     
     // We'd like to get called when Pebbles connect and disconnect, so become the delegate of PBPebbleCentral:
@@ -98,17 +84,6 @@
     timer = [NSTimer scheduledTimerWithTimeInterval: predictionInterval target:self selector:@selector(updatePredictions:) userInfo:nil repeats: YES];
     
     return YES;
-}
-
-+ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
-    //UIGraphicsBeginImageContext(newSize);
-    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
-    // Pass 1.0 to force exact pixel size.
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return newImage;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

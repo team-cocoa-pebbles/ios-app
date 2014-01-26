@@ -84,6 +84,9 @@
                          
         NSLog(@"JSON weather data loaded.");
         temperature = [[root objectForKey:@"main"] objectForKey:@"temp"];
+        double tempF = (([temperature doubleValue]-273.15)*1.8) + 32;
+        temperature =[[NSString alloc] initWithFormat:@"%f",tempF];
+                         
         weather = [root objectForKey:@"weather"];
         description = [[weather objectAtIndex:0] objectForKey:@"description"];
 
@@ -97,7 +100,7 @@
     NSNumber *weatherKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
     NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
     NSDictionary *update = @{ weatherKey:description,
-                              temperatureKey:[NSString stringWithFormat:@"%@\u00B0C", temperature]
+                              temperatureKey:[NSString stringWithFormat:@"%@", temperature]
                             };
     return update;
 }

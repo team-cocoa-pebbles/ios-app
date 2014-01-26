@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <PebbleKit/PebbleKit.h>
 #import "PredictionController.h"
+#import "SettingsViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
@@ -18,9 +19,8 @@
 
 @property (nonatomic, retain) NSTimer *timer;
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UIImage *logoImage;
 @property (strong, nonatomic) PredictionController *predictionController;
-
+@property (strong, nonatomic) SettingsViewController *settingsViewController;
 
 
 @end

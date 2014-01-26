@@ -75,7 +75,7 @@
                            }];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     
-    NSNumber *stringKey = @(0);
+    NSNumber *stringKey = @(3);
     NSDictionary *update = @{stringKey:quote};
     
     return update;

@@ -38,6 +38,11 @@
     [self.logoView addSubview:self.logoImageView];
     [self.view addSubview:self.logoView];
     
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, ([UIScreen mainScreen].bounds.size.width - 10), 60)];
+    [nameLabel setText:@"KIWI"];
+    nameLabel.textColor = [UIColor whiteColor];
+    [self.logoView addSubview:nameLabel];
+    
     // Set up poll table view
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, ([UIScreen mainScreen].bounds.size.height-180))];
     self.tableView.delegate = self;

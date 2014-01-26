@@ -56,9 +56,9 @@
     NSString* firstEventDateString = [dateFormatter stringFromDate:firstEventDate];
     NSString* firstEventLocation = firstEvent.location;
     
-    NSNumber *titleKey = @(0);
-    NSNumber *eventDateString = @(1);
-    NSNumber *eventLocation = @(2);
+    NSNumber *titleKey = @(4);
+    NSNumber *eventDateString = @(5);
+    NSNumber *eventLocation = @(6);
     
     NSDictionary *firstEventInfoDic = @{ titleKey:firstEvent.title,
                                          eventDateString:firstEventDateString,

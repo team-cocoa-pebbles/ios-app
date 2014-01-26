@@ -10,12 +10,12 @@
 
 @interface Settings : NSObject
 
-@property BOOL WeatherOn;
-@property BOOL TrafficOn;
-@property BOOL FactsOn;
-@property BOOL CalendarOn;
-@property BOOL LunchOn;
-@property BOOL QuotesOn;
+@property (assign) BOOL weatherOn;
+@property (assign) BOOL trafficOn;
+@property (assign, nonatomic) BOOL FactsOn;
+@property (assign, nonatomic) BOOL CalendarOn;
+@property (assign, nonatomic) BOOL LunchOn;
+@property (assign, nonatomic) BOOL QuotesOn;
 
 + (Settings *)sharedSettings;
 @end

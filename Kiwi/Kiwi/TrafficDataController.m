@@ -90,7 +90,7 @@
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     
     NSNumber *trafficKey = @(2); // This is our custom-defined key for the icon ID, which is of type uint8_t.
-    NSDictionary *update = @{ trafficKey:relevantTrafficStr };
+    NSDictionary *update = @{trafficKey:relevantTrafficStr };
     return update;
 }
 

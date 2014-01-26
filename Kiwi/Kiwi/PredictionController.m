@@ -22,7 +22,7 @@
 -(id)init
 {
     self = [super init];
-    
+    counter = 0;
     // Set up the location manager
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.distanceFilter = 1.0 * 1000.0; // Move at least 1km until next location event is generated
@@ -59,8 +59,20 @@
     
     NSDictionary *calendarUpdate = [self.calendarDataController retrieveData];
     
-    NSDictionary *relevantUpdate = weatherUpdate;
+    NSDictionary *relevantUpdate;
     
+    if((counter % 2) == 0){
+         relevantUpdate = weatherUpdate;
+    }
+    /*else if((counter % 2) == 1){
+        relevantUpdate = trafficUpdate;
+    }
+    else if((counter % 5) == 0){
+        relevantUpdate = twitterUpdate;
+    }*/
+    counter++;
+    
+    NSLog(@"Update chosen: %@", relevantUpdate);
     return relevantUpdate;
 }
 

@@ -14,7 +14,9 @@
 #import "CalendarDataController.h"
 #import "Settings.h"
 
-@interface PredictionController : NSObject
+@interface PredictionController : NSObject {
+    int counter;
+}
 
 @property (strong, nonatomic) WeatherDataController *weatherDataController;
 @property (strong, nonatomic) TrafficDataController *trafficDataController;

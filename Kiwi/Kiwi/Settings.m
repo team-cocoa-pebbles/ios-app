@@ -10,8 +10,6 @@
 
 @implementation Settings
 
-@synthesize WeatherOn;
-
 + (Settings *)sharedSettings
 {
     static Settings *sharedSettings;
@@ -20,12 +18,12 @@
     {
         if (!sharedSettings){
             sharedSettings = [[Settings alloc] init];
-            /*self.WeatherOn = YES;
-            self.TrafficOn = YES;
-            self.FactsOn = TRUE;
-            self.CalendarOn = TRUE;
-            self.LunchOn = TRUE;
-            self.QuotesOn = TRUE;*/
+//            [self setWeatherOn:YES];
+ //           [self setTrafficOn:YES];
+  //          [self setFactsOn:TRUE];
+   //         [self CalendarOn = TRUE;
+    //        self.LunchOn = TRUE;
+      //      self.QuotesOn = TRUE;
         }
         
         return sharedSettings;

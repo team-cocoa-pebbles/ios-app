@@ -99,7 +99,8 @@
     
     NSNumber *weatherKey = @(0); // This is our custom-defined key for the icon ID, which is of type uint8_t.
     NSNumber *temperatureKey = @(1); // This is our custom-defined key for the temperature string.
-    NSDictionary *update = @{ weatherKey:description,
+    NSDictionary *update = @{
+                              weatherKey:description,
                               temperatureKey:[NSString stringWithFormat:@"%@", temperature]
                             };
     return update;

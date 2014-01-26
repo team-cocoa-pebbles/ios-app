@@ -67,7 +67,7 @@
     NSLog(@"Launching Kiwi");
     self.predictionController = [[PredictionController alloc] init];
     self.settingsViewController = [[SettingsViewController alloc] init];
-    predictionInterval = 60000;
+    predictionInterval = 10; //60000;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.settingsViewController;

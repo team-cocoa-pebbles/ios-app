@@ -27,8 +27,8 @@
     _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
+    
     self.weatherDataController = [[WeatherDataController alloc] init];
-    self.trafficDataController = [[TrafficDataController alloc] init];
     
     return self;
 }
@@ -44,15 +44,7 @@
     NSLog(@"Lat: %f Long: %f", coordinate.latitude, coordinate.longitude);
     
     NSString *message = [self.weatherDataController retrieveData:coordinate];
-    NSLog([NSString stringWithFormat:@"%@", message]);
-    
-    CLLocationCoordinate2D coordinateT = _locationManager.location.coordinate;
-
-    
-    NSLog(@"T1: Lat: %f Long: %f", coordinateT.latitude, coordinateT.longitude);
-    message = [self.trafficDataController retrieveData:coordinateT];
-    message = [self.trafficDataController getMostRelevantTraffic];
-    NSLog([NSString stringWithFormat:@"%@", message]);
+    NSLog(message);
 }
 
 

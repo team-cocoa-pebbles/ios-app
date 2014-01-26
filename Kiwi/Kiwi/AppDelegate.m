@@ -137,13 +137,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     //self.logoImage = (UIImage*)(resizedImage:CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) interpolationQuality:1);
+    self.predictionController = [[PredictionController alloc] init];
     
     UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [refreshButton setTitle:@"Fetch Weather" forState:UIControlStateNormal];
     [refreshButton addTarget:self action:@selector(refreshAction:) forControlEvents:UIControlEventTouchUpInside];
     [refreshButton setFrame:CGRectMake(10, 100, 300, 100)];
     [self.window addSubview:refreshButton];
-    
+    [self.predictionController initiatePredictions];
     [self.window makeKeyAndVisible];
     
     // We'd like to get called when Pebbles connect and disconnect, so become the delegate of PBPebbleCentral:

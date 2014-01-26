@@ -13,6 +13,4 @@
     dispatch_semaphore_t semaphore;
 }
 
-- (NSString*)retrieveData:(NSDictionary*) dictionary;
-
 @end
